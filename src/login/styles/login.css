@@ -1,1 +1,158 @@
-/* CSS를 활용하여 레이아웃 및 스타일링을 완성해주세요 */
+:root {
+  font-size: 16px;
+
+  --color-text: #121212;
+  --color-main: #03cf5d;
+  --color-focus: #24388d;
+
+  --input-border: #dadada;
+  --input-bg: #fff;
+  --input-focus-bg: #e9f0fd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginLogo svg {
+  width: 14.375rem;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.loginForm {
+  width: 100%;
+  padding: 0 1.25rem;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.loginID,
+.loginPassword {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+}
+
+label {
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+input[type='text'],
+input[type='password'] {
+  height: 2.8125rem;
+  padding: 0 0.75rem;
+  font-size: 0.875rem;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  border-radius: 0.25rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--color-main);
+  background: var(--input-focus-bg);
+  box-shadow: 0 0 0 0.125rem rgba(36, 56, 141, 0.2);
+}
+
+.loginOption,
+.loginSecurity {
+  margin-top: 0.625rem;
+  display: flex;
+  align-items: center;
+}
+
+.loginOption input[type='checkbox'] {
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.3125rem;
+}
+
+.loginSecurity {
+  margin-top: 0.75rem;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-size: 0.875rem;
+}
+
+.loginSecurity button,
+.loginSecurity a {
+  font-size: 1rem;
+  color: var(--color-text);
+  background: none;
+  border: none;
+  padding: 0;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+button[type='submit'] {
+  width: 100%;
+  height: 2.8125rem;
+  margin-top: 1.25rem;
+  font-size: 1rem;
+  color: #fff;
+  background: var(--color-main);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+button[type='submit']:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.1875rem;
+}
+
+@media (min-width: 48rem) {
+  .loginForm {
+    max-width: 31.25rem;
+    padding: 0 1.25rem;
+  }
+
+  .loginSecurity {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.loginPage {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  width: 100%;
+  max-width: 31.25rem;
+}
