@@ -3,9 +3,9 @@
 .pro {
   display: grid;
   background:
-    url(../products/ipad_pro.jpeg) no-repeat center / cover,
+    url(../products/ipad_pro.jpeg) no-repeat center / contain,
     black;
-  grid-template-columns: minmax(738px, 1fr);
+  grid-template-columns: 1fr;
   align-content: start;
   min-height: 700px;
   justify-items: center;
@@ -274,8 +274,6 @@
   grid-template-columns: minmax(738px, 1fr);
   justify-items: center;
   row-gap: 10px;
-  aspect-ratio: 738 / 548;
-  block-size: 100%;
 
   .airpods-pro-head {
     font-size: 40px;
