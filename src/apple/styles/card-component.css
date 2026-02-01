@@ -1,3 +1,57 @@
-@import "./reset.css";
-@import "./theme.css";
-@import "./base.css";
+@import './reset.css';
+@import './theme.css';
+@import './base.css';
+
+.pro {
+  display: grid;
+  background: black;
+  grid-template-columns: minmax(734px, 1fr);
+  justify-items: center;
+
+  row-gap: 10px;
+
+  h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--white);
+  }
+  p {
+    font-size: 20px;
+    color: var(--white);
+  }
+  .pro-date {
+    font-size: 16px;
+    color: var(--gray);
+  }
+
+  .pro-more {
+    background: var(--blue-200);
+    inline-size: 100px;
+    border-radius: 30px;
+    color: var(--white);
+    padding: 8px;
+  }
+  .pro-store {
+    inline-size: 100px;
+    border-radius: 30px;
+    background: transparent;
+    border: 1px solid var(--blue-200);
+    color: var(--blue-200);
+    padding: 8px;
+  }
+
+  .pro-img {
+    display: grid;
+    place-content: center;
+    inline-size: 100%;
+    min-inline-size: 734px;
+    aspect-ratio: 734/548;
+    background: url(../products/ipad_pro.jpeg) no-repeat center;
+    block-size: 548px;
+  }
+  .pro-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+  }
+}
